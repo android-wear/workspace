@@ -155,3 +155,76 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.
 
 !ENTRY org.eclipse.core.net 1 0 2014-03-19 21:11:43.822
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-03-19 21:42:08.237 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-03-19 21:42:14.931
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-03-19 21:49:34.697 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-03-19 21:49:43.200
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-19 21:50:44.451
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2014-03-19 21:50:44.451
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.451
+!MESSAGE "Android DDMS" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.451
+!MESSAGE "Android Development Tools" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.451
+!MESSAGE "Android Hierarchy Viewer" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.451
+!MESSAGE "Android Traceview" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.451
+!MESSAGE "Tracer for OpenGL ES" will be ignored because it is already installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-03-19 21:50:44.455
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10050 2014-03-19 21:50:44.455
+!MESSAGE Cannot complete the request.  See the error log for details.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.455
+!MESSAGE "Android DDMS" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.455
+!MESSAGE "Android Development Tools" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.455
+!MESSAGE "Android Hierarchy Viewer" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.455
+!MESSAGE "Android Traceview" will be ignored because it is already installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10005 2014-03-19 21:50:44.455
+!MESSAGE "Tracer for OpenGL ES" will be ignored because it is already installed.
+!SESSION 2014-03-19 21:51:21.662 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-03-19 21:51:24.997
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2014-03-19 21:51:27.236
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-03-19 21:57:27.819 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ywang/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-03-19 21:57:33.309
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
