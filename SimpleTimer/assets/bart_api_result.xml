@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<uri>
+<![CDATA[
+http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ASHB&dest=CIVC&date=now&b=0&a=1
+]]>
+</uri>
+<origin>ASHB</origin>
+<destination>CIVC</destination>
+<sched_num>34</sched_num>
+<schedule>
+<date>Mar 29, 2014</date>
+<time>5:26 PM</time>
+<before>0</before>
+<after>1</after>
+<request>
+<trip origin="ASHB" destination="CIVC" fare="3.75" origTimeMin="5:30 PM" origTimeDate="03/29/2014 " destTimeMin="5:56 PM" destTimeDate="03/29/2014" clipper="1.40">
+<leg order="1" transfercode="T" origin="ASHB" destination="MCAR" origTimeMin="5:30 PM" origTimeDate="03/29/2014" destTimeMin="5:35 PM" destTimeDate="03/29/2014" line="ROUTE 4" bikeflag="1" trainHeadStation="FRMT" trainIdx="35"/>
+<leg order="2" transfercode="" origin="MCAR" destination="CIVC" origTimeMin="5:35 PM" origTimeDate="03/29/2014" destTimeMin="5:56 PM" destTimeDate="03/29/2014" line="ROUTE 1" bikeflag="1" trainHeadStation="MLBR" trainIdx="35"/>
+</trip>
+</request>
+</schedule>
+<message>
+<co2_emissions>
+<![CDATA[
+<p>CO<sub>2</sub> emissions saved by this BART trip: <strong>9.8 pounds.</strong> <a href="http://www.bart.gov/guide/carbon.aspx">Read more</a></p>
+]]>
+</co2_emissions>
+</message>
+</root>

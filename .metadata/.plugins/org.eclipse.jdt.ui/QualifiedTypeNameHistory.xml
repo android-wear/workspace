@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.example.simpletimer.R.layout"/>
+<fullyQualifiedTypeName name="com.example.simpletimer.R.id"/>
+<fullyQualifiedTypeName name="com.example.simpletimer.R.string"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.app.TaskStackBuilder"/>
+<fullyQualifiedTypeName name="android.support.v4.app.TaskStackBuilder"/>
+</qualifiedTypeNameHistroy>

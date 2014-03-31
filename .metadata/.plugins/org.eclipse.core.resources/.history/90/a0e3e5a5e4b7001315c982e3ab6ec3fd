@@ -1,0 +1,202 @@
+package com.example.simpletimer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends ActionBarActivity implements OnClickListener{
+	private CountDownTimer countDownTimer;
+	 private boolean timerHasStarted = false;
+	 private Button startB;
+	 public TextView text;
+	 public String xmlString;
+	 private final long startTime = 300 * 1000;
+	 private final long interval = 1 * 1000;
+	 private final static String BART_SERVER_URI = "http://api.bart.gov/api/sched.aspx";
+	 private final static String BART_APP_ID = "";
+	 //private final static String BART_SERVER_FILENAME = "?cmd=depart&" + ;
+	 
+	 private final static String BART_SERVER_URI_DEBUG = 
+			"http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ASHB&dest=CIVC&date=now&key=MW9S-E7SL-26DU-VV8V&b=0&a=1";
+	 private static final String TAG = "GET_XML";
+
+	 // Sample Bart API Query URI
+	 // http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ASHB&dest=CIVC&date=now&key=MW9S-E7SL-26DU-VV8V&b=2&a=2&l=1
+	 // What' the meaning of final when specifies a string?
+ 
+			 
+
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+	 /*
+		 try {
+		  URL url = new URL(BART_SERVER_URI_DEBUG);
+		  HttpURLConnection con = (HttpURLConnection) url.openConnection();
+		  readStream(con.getInputStream());
+		  xmlString=convertStreamToString(con.getInputStream());
+		  //System.out.println(xmlString);
+		  //Log.d(TAG, "XML String Not Found");
+		  Log.d(TAG, xmlString);
+		  } catch (Exception e) {
+		  e.printStackTrace();
+		}
+	*/
+	
+	  super.onCreate(savedInstanceState);
+	  setContentView(R.layout.activity_main);
+	  startB = (Button) this.findViewById(R.id.button);
+	  startB.setOnClickListener(this);
+	  text = (TextView) this.findViewById(R.id.timer);
+	  countDownTimer = new MyCountDownTimer(startTime, interval);
+	  text.setText(text.getText() + String.valueOf(formatTime(startTime)));
+	 }
+
+	 @Override
+	 public void onClick(View v) {
+	  if (!timerHasStarted) {
+	   countDownTimer.start();
+	   timerHasStarted = true;
+	   startB.setText(R.string.button_stop);
+	  } else {
+	   countDownTimer.cancel();
+	   timerHasStarted = false;
+	   startB.setText(R.string.button_start);
+	  }
+	 }
+
+	 public class MyCountDownTimer extends CountDownTimer {
+	  public MyCountDownTimer(long startTime, long interval) {
+	   super(startTime, interval);
+	  }
+
+	  @Override
+	  public void onFinish() {
+	   text.setText(R.string.timeup);
+	  }
+
+	  @Override
+	  public void onTick(long millisUntilFinished) {
+	   text.setText("" + formatTime(millisUntilFinished));
+	  }
+	  
+	 }
+	 
+	 private void readStream(InputStream in) {
+		  BufferedReader reader = null;
+		  try {
+		    reader = new BufferedReader(new InputStreamReader(in));
+		    String line = "";
+		    while ((line = reader.readLine()) != null) {
+		      System.out.println(line);
+		    }
+		  } catch (IOException e) {
+		    e.printStackTrace();
+		  } finally {
+		    if (reader != null) {
+		      try {
+		        reader.close();
+		      } catch (IOException e) {
+		        e.printStackTrace();
+		        }
+		    }
+		  }
+		} 
+
+	 // This function is not currently used. 
+	  private static String convertStreamToString(InputStream is) {
+		    /*
+		     * To convert the InputStream to String we use the BufferedReader.readLine()
+		     * method. We iterate until the BufferedReader return null which means
+		     * there's no more data to read. Each line will appended to a StringBuilder
+		     * and returned as String.
+		     */
+		    BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+		    StringBuilder sb = new StringBuilder();
+
+		    String line = null;
+		    try {
+		        while ((line = reader.readLine()) != null) {
+		            sb.append(line + "\n");
+		        }
+		    } catch (IOException e) {
+		        e.printStackTrace();
+		    } finally {
+		        try {
+		            is.close();
+		        } catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		    }
+		    return sb.toString();
+		}
+	  
+	  private String formatTime(long millis) {  
+		    String output = "00:00";  
+		    long seconds = millis / 1000;  
+		    long minutes = seconds / 60;  
+
+		    seconds = seconds % 60;  
+		    minutes = minutes % 60;  
+
+		    String sec = String.valueOf(seconds);  
+		    String min = String.valueOf(minutes);  
+
+		    if (seconds < 10)  
+		        sec = "0" + seconds;  
+		    if (minutes < 10)  
+		        min= "0" + minutes;  
+
+		    output = min + " : " + sec;  
+		    return output;
+		}//formatTime 
+	  
+	  // This function is not currently used. 
+	  private String getBartTime() {
+		  String most_recent_time="";
+		  
+		  
+		  XmlPullParserFactory pullParserFactory;
+			try {
+				pullParserFactory = XmlPullParserFactory.newInstance();
+				XmlPullParser parser = pullParserFactory.newPullParser();
+
+				    InputStream in_s = getApplicationContext().getAssets().open("bart_api_result");
+			        parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+		            parser.setInput(in_s, null);
+
+		            //parseXML(parser);
+
+			} catch (XmlPullParserException e) {
+
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		  
+		  return most_recent_time;
+	  }
+	  
+	
+
+}
