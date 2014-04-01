@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 
 	 // Sample Bart API Query URI
 	 // http://api.bart.gov/api/sched.aspx?cmd=depart&orig=ASHB&dest=CIVC&date=now&key=MW9S-E7SL-26DU-VV8V&b=2&a=2&l=1
-	 // What' the meaning of final when specifies a string?
+	 // What' the meaning of final when specifies a string?  test
  
 			 
 
