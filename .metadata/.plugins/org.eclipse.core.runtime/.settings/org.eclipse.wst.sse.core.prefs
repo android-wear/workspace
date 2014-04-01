@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=MainActivity,HelloWorldAndroid,SimpleTimer,appcompat_v7,appcompat_v7_2
+task-tag-projects-already-scanned=MainActivity,HelloWorldAndroid,SimpleTimer,appcompat_v7,appcompat_v7_2,BartApiTest,appcompat_v7_3

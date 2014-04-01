@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+import android.preview.support.wearable.notifications.*;
+import android.preview.support.v4.app.NotificationManagerCompat;
+import android.support.v4.app.NotificationCompat;
+
 public class MainActivity extends ActionBarActivity {
 
 	@Override
