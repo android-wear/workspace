@@ -20,3 +20,18 @@ To create new local repository
 
 To resolve conflicts:
 manually edit... Don't rely on git mergetool as it can open a random text editor.
+
+To check for file changes:
+git status
+
+Get checkin history:
+git log
+
+Get last 3 checkins:
+git log HEAD~3..HEAD
+
+# show the diff for each patch 
+git log -p HEAD..origin/master  
+
+# show a single diff 
+git diff HEAD...origin/master
