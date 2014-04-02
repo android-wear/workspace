@@ -1,0 +1,22 @@
+http://try.github.io/levels/1/challenges/1
+
+This one has everything, good as a reference:
+http://www.vogella.com/tutorials/Git/article.html#gitremotebranch_overview
+
+
+To check in:
+0. git checkout master
+1. git add *.java
+2. git commit -m 'my first checkin'
+3. git push origin
+
+To sync with origin:
+1. git pull
+(or "git pull origin master", which pulls from origin to master)
+
+To create new local repository
+1. git branch testing
+2. git checkout testing
+
+To resolve conflicts:
+manually edit... Don't rely on git mergetool as it can open a random text editor.
