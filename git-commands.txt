@@ -35,3 +35,7 @@ git log -p HEAD..origin/master
 
 # show a single diff 
 git diff HEAD...origin/master
+
+
+# disregard all local changes, force to remote
+git reset --hard
